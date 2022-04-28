@@ -1,0 +1,360 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    background: repeating-radial-gradient(
+        134.34% 134.34% at 50% 0%,
+        hsl(214, 47%, 23%),
+        hsl(237, 49%, 15%)
+    );
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.Game{
+    width:100vw;
+    height:100vh;
+    background: repeating-radial-gradient(
+        134.34% 134.34% at 50% 0%,
+        hsl(214, 47%, 23%),
+        hsl(237, 49%, 15%)
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Score-portal{
+    border:1px solid white;
+    border-radius: 10px;
+    display: flex;
+    width:700px;
+    height: 150px;
+    margin-top: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.title{
+    padding:20px;
+}
+.total-score{ 
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width:150px;
+   height:100px;
+   background-color: white;
+   border-radius: 10px;
+   margin-right:20px;
+   
+}
+
+.total-score p{
+   color:hsl(229, 64%, 46%);
+   font-size: larger;
+   font-weight: 600;
+   letter-spacing: 2.5px;
+}
+.total-score h1{
+    color:hsl(229, 25%, 31%);
+    font-weight: 700;
+}
+
+.game-window-1{
+    width:500px;
+    height:450px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 100px auto;
+    background-image: url('./images/bg-triangle.svg');
+    background-repeat:no-repeat;
+    background-position: center;
+    /* display: none; */
+}
+.primary-btn{
+    cursor: pointer;
+    background-color: white;
+    border-radius: 50%;
+    width:180px;
+    height:180px;
+    
+    box-shadow: inset 10px 15px 8px rgb(185, 185, 185);
+}
+.primary-btn:hover{
+    transform: translate3d(0px,-8px,0px);
+}
+.paper{
+    margin-left:-20px;
+    margin-right:20px;
+    border: 20px solid hsl(230, 89%, 65%);
+}
+.scissors{
+    margin-left:80px;
+    border:20px solid hsl(40, 84%, 53%);
+}
+.rock{
+    margin-top:45px;
+    border:20px solid hsl(349, 70%, 56%);
+}
+
+.game-window-2{
+    width:900px;
+    height:300px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    display: none;
+}
+.common-in-picked{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.common-in-picked p{
+    font-size: 25px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    color:rgba(255,255,255);
+}
+.picked{
+    width:230px;
+    height: 230px;
+    margin-top:45px;
+    border:25px solid hsl(230, 89%, 65%);
+    box-shadow: 0 0 0.5em 60px rgba(255,255,255,0.04),
+    0 0 1em 120px rgba(255,255,255,0.03),
+    0 0 1em 180px rgba(255,255,255,0.002);
+}
+.picked img{
+    width:70px;
+    height: 70px;
+}
+.decision{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.decision h1{
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: white;
+    margin-bottom:30px;
+}
+.decision button{
+    background-color: white;
+    padding:12px 24px;
+    width:150px;
+    font-family: 'Barlow Semi Condensed', sans-serif; 
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color:hsl(349, 71%, 52%);
+    transition: all 0.15s;
+}
+.decision button:hover{
+    background:linear-gradient(to top right,#00bbf9,#fee440);
+    transform: translate3d(0px,-2px,0px);
+    color:rgba(0,0,0,0.8);
+}
+
+
+.attribution {
+    position:fixed;
+    
+    text-align: center;
+    letter-spacing: 2.5px;
+    word-spacing: 2px;
+    margin: 20px auto;
+    color: white;
+  }
+  .attribution a {
+    color: coral;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  .attribution a:hover {
+    border-bottom: 2px solid white;
+    padding:0px 4px;
+    color: rgb(254, 65, 65);
+  }
+  .rule button{
+      width:150px;
+      text-align: center;
+      font-weight: 600;
+      font-size: 20px;
+      position: fixed;
+      bottom: 30px;
+      right:30px;
+      border-radius: 10px;
+      border: 1px solid white;
+      background: repeating-radial-gradient(
+        134.34% 134.34% at 50% 0%,
+        hsl(214, 47%, 23%),
+        hsl(237, 49%, 15%)
+    );
+      color: white;
+      letter-spacing: 2.5px;
+      font-family: 'Barlow Semi Condensed', sans-serif; 
+      outline: none;
+      padding:8px 12px;
+  }
+  .rule button:hover{
+    /* background:linear-gradient(to top right,#00bbf9,#fee440); */
+    transform: translate3d(0px,-3px,0px);
+    /* color:rgba(0,0,0,0.8); */
+    box-shadow: 2px 2px 10px 2px rgba(255,255,255,0.6) ;
+  }
+  .rulePopUp{
+      width:500px;
+      height:500px;
+      display: flex;
+      position: fixed;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      flex-direction: column;
+      justify-content: center;
+      background-color: rgb(255, 255, 255);
+      border-radius: 10px;
+      display: none;
+  }
+  .header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-bottom:4px solid hsl(213, 37%, 28%) ;
+  }
+  .header h1{
+      color: hsl(214, 47%, 23%);
+      margin:30px 50px 30px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+  }
+  .header img{
+      width:30px;
+      height: 30px;
+      margin: 30px 50px 30px;
+  }
+  #rules{
+      margin: 30px auto;
+      width:400px;
+      height:350px;
+  }
+
+  @media(max-width:950px){
+    
+    .Score-portal{
+        width:320px;
+        height: 100px;
+    }
+    .title img{
+        width:120px;
+        height: 80px;
+        padding:10px 10px 10px 0px;
+    }
+    .total-score{
+       width:100px;
+       height:70px;       
+    } 
+    .total-score h1{
+        font-size:25px;
+    }   
+    .game-window-1{
+        width:250px;
+        height:200px;
+        margin-top: 150px;
+    }
+    .primary-btn{
+        width:100px;
+        height:100px;
+        box-shadow: inset 4px 6px 6px rgb(185, 185, 185);
+    }
+    .primary-btn img{
+        width:35px;
+        height: 35px;
+    }
+    .primary-btn:hover{
+        transform: translate3d(0px,-8px,0px);
+    }
+    .paper{ 
+        margin: -45px 0px 0px -80px;
+        border-width: 12px ;
+    }
+    .scissors{
+        margin: -45px -80px 0px 140px;
+        border-width:12px ;
+    }
+    .rock{
+        margin: 100px 0px;
+        border-width:12px ;
+    }
+    
+    .game-window-2{
+        width:350px;
+        height:300px;
+    }    
+    .common-in-picked p{
+        text-align: center;
+        font-size: 12px;
+    }
+    .decision{
+        margin:0px 10px;
+    }
+    .picked{
+        width:100px;
+        height: 100px;
+        border-width:12px;
+    }
+    .picked img{
+        width:30px;
+        height: 30px;
+    }
+    .decision h1{
+        font-size: 15px;
+    }
+    .decision button{
+        padding:8px 6px;
+        width:120px;
+    }
+    .attribution {
+        bottom:100px;
+        width:80%;
+        margin: 0px auto;
+      }
+      
+      .rule button{
+          width:100px;
+          font-size: 15px;
+          padding:8px 10px;
+      }
+      .rulePopUp{
+          width:350px;
+          height:400px;
+      }
+      .header{
+          border-bottom-width:2px;
+      }
+      .header h1{
+          margin:20px 30px;
+      }
+      .header img{
+          width:20px;
+          height: 20px;
+          margin: 30px;
+      }
+      #rules{
+          margin:20px auto;
+          width:300px;
+          height:250px;
+      }
+    
+  }
